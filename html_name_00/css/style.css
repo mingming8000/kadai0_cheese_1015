@@ -1,0 +1,1122 @@
+/* ここから下に記載していく */
+
+/*【１】 ヘッダーの設定 */
+
+header{
+    background-size: cover;
+    background-color:white;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 10px;
+    z-index: 10;
+  }
+  
+header logo{
+    height: auto;
+    width: 300px;
+    align-items: center; 
+    padding: 20px;
+}
+  
+.header-right {
+    /* display: inline-block; */
+    list-style:none;
+  }
+
+  header ul{
+  list-style: none;
+  display: flex;
+}
+
+header li{
+  /* float:left; */
+  font-size: 21px;
+  color: black;
+  /* display: flex; */
+  padding:50px 50px;
+}
+
+/* 221016 1522 aリンクの色と下線を打消し */
+header li a{
+  color:inherit;
+  text-decoration: none;
+}
+
+  /* 【２】トップラッパー */
+
+.top-Wrapper {
+    background-image: url(../img/mainbg.gif);
+    object-fit: fill;
+    width: cover;
+    height: 770px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+   /* background-repeat: no-repeat; */
+
+   /* 221015 1930 以下のbg-size：coverがないと写真が2巡目に */
+    background-size: cover;
+    /* background-position: center; */
+    /* margin:auto auto; */
+    position:relative;
+  }
+
+.top_contents{
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* padding: auto auto; */
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* justify-content: center;
+  vertical-align: middle; */
+}
+
+.top-Wrapper h2 {
+    /* opacity: 0.7; */
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    /* justify-content: center; */
+    letter-spacing: 5px;  
+  }
+  
+.top-Wrapper p {
+    /* opacity: 0.7; */
+    font-size: 32px;
+    color:white;
+    text-align: center;
+    /* justify-content: center; */
+    padding-top:30px;
+  }
+
+
+  /* アバウト・エリア */
+
+.aboutArea {
+  text-align:center;
+  font-size:24px;
+  color:black;
+  /* 221016 1515 写真4枚との間を要調整 */
+  /* margin-bottom: 80px; */
+}
+
+.aboutArea h3{
+  font-size:24px;
+  margin-top: 60px;
+  color:#ffd61a;
+}
+
+.aboutArea .title_cheese{
+  font-size:18px;
+  margin-top: 30px;
+}
+
+.aboutArea .exp_01{
+  font-size:16px;
+  margin-top: 60px;
+}
+
+.aboutArea .exp_02{
+  font-size:16px;
+  margin-top: 40px;
+  line-height: 2;
+}
+
+/* アバウトの下のエリア */
+
+ /* 221016 1515 写真4枚との間を要調整 */
+ /* <!-- 221016 2102 スライドショーに切替のため削除 --> */
+/* .below-about{
+  margin-top: 80px;
+  background-size:cover;
+}
+
+.below-about ul {
+  display:flex;
+  list-style: none;
+ }
+
+.below-about li{
+
+  /* display:inline-block; */
+  /* height: auto;
+  width:auto; */
+  /* padding:30px auto 0; */
+  /* margin:0 auto; */
+/* } */ 
+
+ /*221016 2053 slideshowトライ２-２（6枚⇒4枚に変更にトライ） */ -->
+
+/*
+
+
+右から左へ
+----------------------------*/
+
+.d-demo{
+  margin-top:80px;
+}
+
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*
+IE11対策
+----------------------------*/
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+/*----------------------------*/
+
+.d-demo__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.d-demo__list {
+  display: flex;
+  list-style: none;
+}
+
+.d-demo__list--left{
+animation :infinity-scroll-left 30s infinite linear 0.5s both;
+}
+
+.d-demo__item {
+  width: calc(100vw / 4);
+}
+.d-demo__item > img{
+   width: 100%;
+}
+
+/* コースエリアの冒頭 */
+
+.courseArea h3{
+  font-size:24px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.courseArea p{
+  margin-top: 30px;
+  font-size:16px;
+  /* 221015 1502 追加してみた */
+  line-height: 2;
+  text-align: center;
+}
+
+/* 221015 1510 inner_courseの操作 */
+
+
+/* コース・コンテンツの共通要素221015 1621  */
+
+/* 221015 1613 このコードで写真の角が合った！ */
+.course_img{
+  width:100%;
+}
+
+/* コースエリアのイメージ１ */
+.courseArea_img01{
+  margin-top: 60px; 
+  height: auto;
+  width:cover; 
+} 
+
+.courseArea_img01 ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.course_img01_left{
+	width: 50%;
+}
+
+.course_img01_right{
+	width: 50%;
+  /* text-align: center; */
+  /* margin:0 auto; */
+}
+
+.course-img01_right_contents{
+  width:430px;
+  padding:0 50px;
+  /* box-sizing: border-box; */
+  /* text-align: left;
+  align-items: center; */
+}
+
+.course-img01_right_contents h3{
+	font-size: 24px;
+  text-align: left;
+}
+
+.course-img01_right_contents p{
+	font-size: 16px;
+  margin-top:40px;
+  text-align: left;
+  line-height: 2;
+  /* width:cover; */
+}
+
+/* コースエリアのイメージ２ */
+
+.courseArea_img02{
+  /* margin-top: 60px; */
+  height: auto;
+  width:cover;
+}
+
+.courseArea_img02 ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course_img02_left{
+	width: 50%;
+  /* text-align: center;
+  margin:0 auto; */
+}
+
+.course-img02_left_contents{
+  margin:auto 50px auto auto;
+  width:430px;
+}
+
+.course-img02_left_contents h3{
+	font-size: 24px;
+}
+
+.course-img02_left_contents p{
+	font-size: 16px;
+  margin-top:40px;
+  width:cover;
+  text-align: left;
+  line-height: 2;
+  letter-spacing: -0.02em;
+}
+
+.course_img02_right{
+	width: 50%;
+}
+
+/* コースエリアのイメージ３ */
+
+.courseArea_img03{
+  /* margin-top: 60px; */
+  height: auto;
+  width:cover;
+}
+
+.courseArea_img03 ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.course_img03_left{
+	width: 50%;
+  text-align: center;
+  margin:0 auto;
+}
+
+.course_img03_right{
+	width: 50%;
+  /* text-align: center; */
+  margin:0 auto;
+}
+
+.course-img03_right_contents{
+  margin:auto 50px auto ;
+  width:430px;
+}
+
+.course-img03_right_contents h3{
+	font-size: 24px;
+}
+
+.course-img03_right_contents p{
+	font-size: 16px;
+  margin-top:40px;
+  width:cover;
+  text-align: left;
+  line-height: 2;
+  letter-spacing: -0.02em;
+}
+
+
+/* ニュースエリア */
+
+.newsArea {
+  /* text-align:center; */
+  font-size:24px;
+}
+
+.news_label_01:hover{
+  background-color:lightgray;
+  opacity:70%;
+}
+
+/* 221020 2000 ニュースエリア全体をhover */
+/* https://b-risk.jp/blog/2021/11/hover-reference/ */
+.news_label_02:hover{
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
+}
+
+.news_label_03:hover{
+border-radius: 50%;
+box-shadow: 0px 0px 32px -6px yellow;
+opacity:0.5;
+}
+
+.newsArea h3{
+  font-size:24px;
+  margin-top: 60px;
+  text-align: center;
+  color:#ffd61a;
+}
+
+.newsArea p{
+  font-size:16px;
+  margin: 30px auto 60px auto;
+  text-align: center;
+  color:black;
+}
+
+/* ニュース・コンテンツエリア */
+
+.newsArea{
+  /* margin:0 auto; */
+  text-align: center;
+}
+
+/* .newsContents_center_yose{
+  margin:0 auto;
+  text-align: center;
+} */
+
+.newsContents ul{
+  display: flex;
+  /* margin:0 auto; */
+}
+
+.newsContents li{
+  width:300px;
+  padding:0 15px;
+}
+
+.newsContents li .hiduke{
+  font-size: 16px;
+  padding-top: 30px;
+}
+
+.newsContents li .exp_03{
+  font-size: 14px;
+  padding-top: 24px;
+  line-height: 2;
+  /* letter-spacing: -0.05em; */
+}
+
+
+/* letter-spacing: -0.02em; */
+
+/* Moreボタン */
+
+.btn_more{
+  text-align: center;
+}
+
+.More{
+  margin:60px auto;
+  text-align: center;
+  width:300px;
+  height: 60px;
+  font-size:18px;
+  background-color:#ffd61a ;
+  color:white;
+  /* border-color:#ffd61a; */
+  border-style:none;
+}
+
+.More:hover{
+  opacity:50%;
+  color:red;
+}
+
+/* アクセス･タイトル*/
+
+.access_Upper {
+  background-color: #fafafa;
+  /* height:auto; */
+  height: 192px;
+  width:cover;
+}
+
+.access_Upper h3{
+  text-align:center;
+  color:black;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 60px;
+}
+
+.access_Upper p{
+  text-align:center;
+  color:black;
+  font-size: 16px;
+  padding: 30px 0 60px 0;
+}
+
+/* アクセス･MAP*/
+
+/* .map{
+  display:block;
+  width:cover;
+  height:300px;
+}
+
+.map_inside{
+  width:cover;
+  height:300px;
+} */
+
+
+/* アクセス･コンテンツ*/
+
+.accessContents{
+  padding-top: 60px;
+  /* 221015 2212 trの幅で15pxの幅あり
+  padding-bottom: 45px; */
+  background-color: #fafafa;
+  /* height:auto; */
+  height: 320px;
+  width:cover;
+  /* text-align: center; */
+}
+
+/* 221015 2208 tableでの枠線の消し方 */
+/* https://csshtml.work/table-border-none/#:~:text=%E3%82%82%E3%81%AE%E3%81%A8%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82-,%E3%80%90CSS%E3%80%91table%E3%81%A8td%E3%81%ABborder%3Anone%E3%82%92%E6%8C%87%E5%AE%9A,%E3%81%99%E3%82%8B%E3%81%A8%E7%B7%9A%E3%82%92%E6%B6%88%E3%81%9B%E3%81%BE%E3%81%99%E3%80%82 */
+.example,.example td,.example th{
+  border: none !important;
+}
+
+
+table{
+  margin:0 auto;
+}
+
+tr{
+  height:46px;
+}
+
+
+/* コンタクトエリア*/
+
+.contactArea{
+  text-align:center;
+  font-size:24px;
+  color:black;
+  margin-top: 60px;
+  margin-bottom:70px;
+}
+
+.contactArea h3{
+  font-size: 24px;
+}
+
+.contactArea title{
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.contact_p1{
+  font-size: 16px;
+  margin-top: 60px;
+  line-height: 1.5;
+}
+
+.contact_p2{
+  font-size: 16px;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+
+
+/* フォームの内容 */
+/* <!-- 今日は221010_2047:フォームエリアにtalbeを入れてみたい > */
+
+.formArea{
+  width: 568px;
+  height:600px;
+  /* display:flex; */
+  margin:0 auto ;
+}
+
+/* .table_rule{ */
+  /* width:328x; */
+  /* table-layout:fixed;
+  border-collapse: collapse;
+  border-spacing: 8px ;
+  width:100%; */
+  /* margin:0 auto; */
+/* }  */
+
+.td01{
+  width:350px;
+  border-left: none ;
+  font-size: 16px;
+  padding-left:16px;
+  line-height: center;
+}
+
+.td02{
+  width:528px;
+  border-right: none ;
+  font-size: 16px;
+  padding:8px auto 8px 8px;
+  line-height: center;
+  /* line-height: 2; */
+
+}
+
+.table,td,th{
+  border:2px solid #bfbfbf;
+  vertical-align: middle;
+}
+
+.table_01 ,.table_02,.table_03,.table_04{
+  line-height: 36px;
+  line-height: center;
+}
+
+.table_04 .td01 {
+  line-height: 1.5;
+}
+
+.table_04 .td02 {
+  line-height: 1.5;
+}
+
+/* 221016 0943 チャレンジ失敗 */
+/* input {
+  width:280em;
+  width: 280px;
+} */
+
+.ichigyo{
+  line-height: 1.5;
+  margin: 8px auto 8px 8px;
+  width:300px
+}
+
+/* .sentaku{
+  line-height: 1.5;;
+} */
+
+.choices{
+  display: block;
+  margin: 10px 0;
+}
+
+textarea{
+  /* width:300em; */
+  line-height: 4;
+  display: block;
+  margin:8px auto 8px 8px;
+  width:300px;
+}
+
+/* 221016 1037 submit button の設定 */
+
+.btn_submit{
+  text-align: center;
+  margin:30px auto 140px;
+}
+
+.submit{
+  text-align: center;
+  width:300px;
+  height: 60px;
+  background-color:#ffd61a ;
+  color:white;
+  border-style:none;
+}
+
+.submit:hover{
+  opacity:50%;
+  color:red;
+}
+
+
+/* footerの設定 */
+
+footer{
+  /* background-size: cover; */
+  background-color:gray;
+
+  /* margin-top:140px; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  text-align: center;
+  padding: 30px 0;
+  /* z-index: 10; */
+}
+
+footer p{
+  color:white;
+  font-size:12px;
+}
+
+
+/* 221016 1726　Youtube埋め込み */
+/* https://zero-plus.io/media/css-youtube/ */
+/* <!-- 221020 2034 youtube box化 --> */
+
+.youtube_box{
+  display:flex;
+  flex:wrap;
+  width:cover;
+  /* height:auto; */
+  margin-top:80px;
+  background-color:#ffd61a;
+  padding:50px 0;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.youtube_small_box_01{
+  width:50%;
+  box-sizing: border-box;
+  height:auto;
+  justify-content: center;
+  margin:0 auto;
+}
+.setsumei_01{
+  /* display: block; */
+  /* justify-content: center; */
+  text-align: center;
+  margin:0 auto;
+  width:50%;
+  /* margin: 0px auto; */
+  /* margin-top: 80px; */
+}
+
+.setsumei_01 h3{
+  /* border-bottom: 2px dotted black; */
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  /* width:80%; */
+  /* padding: 80px; */
+  /* border-bottom :1px dashed black; */
+  background: linear-gradient(transparent 50%, #a8eaff 50%)
+}
+
+/* .video {
+  width: 100%;
+  /* display: block; */
+  /* justify-content: center; */
+  /* position: relative;
+  padding-top: 56.25%;
+  /* margin-top:50px; */
+/* } */
+
+/* .video iframe {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%; */
+  /* height: 50%; */
+  /* margin:0 auto;
+} */
+
+.video {
+  width: 80%;
+  margin:0 auto;
+  aspect-ratio: 16 / 9;
+  position:relative;
+}
+.video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+
+/* 221016 2012　Youtube埋め込み2
+/* https://www.youtube.com/watch?v=VeOiTX_zXrk */
+
+/* .setsumei_01_2{
+  text-align: center;
+  /* margin-top: 80px; */
+/* }
+
+.setsumei_01_2 h3{
+  font-size: 40px;
+}
+
+.video {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+  margin-top:50px;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  margin:0 auto;
+} */ 
+
+/* 221016 2012　Youtube埋め込み3 */
+
+.youtube_small_box_02{
+  width:50%;
+  box-sizing: border-box;
+  height:auto;
+}
+
+.setsumei_01_3{
+  text-align: center;
+  /* margin-top: 80px; */
+  margin:0 auto;
+  width:50%;
+}
+
+.setsumei_01_3 h3{
+  font-size: 24px;
+  margin-bottom: 30px;
+  background: linear-gradient(transparent 50%, #a8eaff 50%);
+}
+
+.youtube {
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  position:relative;
+}
+.youtube iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 10;
+  left: 5%;
+}
+
+/* <!-- 221016 1742 slideshowトライ --> */
+/* https://web-camp.io/magazine/archives/80525 */
+
+.setsumei_02{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.setsumei_02 h3{
+  font-size: 40px;
+}
+
+.slider {
+  width: 700px;
+  height: 463.63px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.slider-item {
+  width: 700px;
+  float: left;
+}
+img{
+  width:100%;
+}
+.slider-inner {
+  width: 300%;
+  animation: slider 10s infinite ease;
+}
+
+@keyframes slider {
+	0% {
+	transform: translateX(0);
+	}
+	33% {
+	transform: translateX(-300px);
+	}
+	66% {
+	transform: translateX(-600px);
+	}
+	100% {
+	transform: translateX(0);
+	}
+}
+
+
+
+<!-- /*221016 2000 slideshowトライ２ */ -->
+
+/*
+右から左へ
+----------------------------*/
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*
+IE11対策
+----------------------------*/
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+/*----------------------------*/
+
+.d-demo__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.d-demo__list {
+  display: flex;
+  list-style: none;
+}
+
+.d-demo__list--left{
+animation :infinity-scroll-left 95s infinite linear 0.5s both;
+}
+
+.d-demo__item {
+  width: calc(100vw / 6);
+}
+.d-demo__item > img{
+   width: 100%;
+}
+
+
+<!-- /*221016 2053 slideshowトライ２-２（6枚⇒4枚に変更にトライ） */ -->
+
+/*
+右から左へ
+----------------------------*/
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*
+IE11対策
+----------------------------*/
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+/*----------------------------*/
+
+.d-demo__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.d-demo__list {
+  display: flex;
+  list-style: none;
+}
+
+.d-demo__list--left{
+animation :infinity-scroll-left 30s infinite linear 0.5s both;
+}
+
+.d-demo__item {
+  width: calc(100vw / 4);
+}
+.d-demo__item > img{
+   width: 100%;
+}
+
+
+/* <!-- 221022 0933 トライアル（フワッと）
+https://coco-factory.jp/ugokuweb/move02/4-1/ --> */
+
+/* その場で
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:3.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  font-size:80px;
+  text-align: center;
+  margin-top: 80px;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  } */
+
+  /* <!-- 221022 0950 トライアル（フワッと）
+  <!-- https://pengi-n.co.jp/blog/scroll-animation/ --> */
+
+  /* .top {
+    height: 100vh;
+  }
+  .title {
+    text-align: center;
+    line-height: 100vh;
+  }
+  /* ブロック共通初期設定 */
+
+
+  /* .scroll-block {
+    width: 50%;
+    height: 500px;
+    margin: 0 auto 400px;
+    line-height: 500px;
+    text-align: center;
+    background-color: lightcoral;
+  } */ */
+
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .top {
+    height: 100vh;
+  }
+  .title {
+    text-align: center;
+    line-height: 100vh;
+  }
+  @media screen and (min-width:481px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+  /* ブロック共通初期設定 */
+  .scroll-block {
+    width: 50%;
+    height: 500px;
+    margin: 0 auto 100px;
+    line-height: 500px;
+    text-align: center;
+    background-color: lightcoral;
+  }
+
+  /* 221022 1039 背景追加にトライアル */
+  .scroll_block_bg{
+    background-color:#ffd61a;
+    width:cover;
+    height: 650px;
+    align-items: center;
+    /* padding:100px auto; */
+    padding-top:100px;
+    /* padding-bottom:100px; */
+  }
+
+/* ----------パターン1：透明度が変化---------- */
+/* 画面外 */
+.fade-block1 {
+  opacity: .1;
+  transition: all 3.5s;
+}
+/* 画面に入った時の動き */
+.fade-block1.blockIn {
+  opacity: 1;
+}
+
+/* ----------パターン2：下からふわっと---------- */
+/* 画面外 */
+.fade-block2 {
+  transform: translateY(300px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block2.blockIn {
+  transform: translateY(0);
+}
+
+/* ----------パターン3：右からふわっと---------- */
+/* 画面外 */
+.fade-block3 {
+  transform: translateX(400px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block3.blockIn {
+  transform: translateX(0);
+}
+/* ----------パターン4：左からふわっと---------- */
+/* 画面外 */
+.fade-block4 {
+  transform: translateX(-400px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block4.blockIn {
+  transform: translateX(0);
+}
+/* ----------パターン5：斜め下からふわっと---------- */
+/* 画面外 */
+.fade-block5 {
+  transform: translate(300px, 300px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block5.blockIn {
+  transform: translate(0);
+}
+
+/* ----------パターン6：画面外に飛んでいく---------- */
+/* 画面外 */
+.fade-block6 {
+  transform: translate(-100vw);
+  transition: all 5s ease;
+}
+/* 画面に入った時の動き */
+.fade-block6.blockIn {
+  transform: translate(100vw);
+}
+
+
+

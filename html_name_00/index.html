@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>チーズアカデミー</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 221022 0950 トライアル（フワッと）
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<!-最初の設定は終わっています　必要な方は触ってください -->
+
+<body>
+  <!-- この中に記述していく -->
+  <!-- ここから下にコードを書く -->
+
+  <header>
+      <div class="header-left">
+        <img class="logo" src="./img/header_logo.png">
+      </div>
+      <div class="header-right">
+        <ul class="header-list">
+          <!-- 221015 1444 a hrefのリンクをつけてみる！ -->
+          <!-- 221015 1449 リンク先にidをつける（#はつけない） -->
+          <li>
+            <a href="#About">ABOUT</a> 
+          </li>
+          <li>
+            <a href="#course">COURSE</a>
+          </li>
+          <li>
+            <a href="#news">NEWS</a>
+          </li>
+          <li>
+            <a href="#access">ACCESS</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+  </header>
+
+  <div class="top-Wrapper">
+    <div class="top_contents">
+      <h2>セカイを変えるチーズを作ろう<br></h2>
+      <p>チーズ職人養成学校「チーズアカデミーTOKYO」</p>
+    </div>
+  </div>
+    <!-- <h1>セカイを変えるチーズを作ろう</h1>
+    <p>チーズ職人養成学校「チーズアカデミーＴＯＫＹＯ」</p>
+  </top-visual> -->
+
+  <div class="aboutArea" >
+    <h3 class="ABOUT" id="About">ABOUT</h3>
+    <p class="title_cheese">チーズアカデミーについて</p>
+    <p class="exp_01">チーズアカデミーは、チーズ職人養成学校です。</p>
+    <p class="exp_02">チーズの素晴らしさを、自給自足を通じて、できるだけ多くの人に知っていただきたい。
+      <br><span>そして、食卓にはいつもチーズがあった、あの頃の当たり前をこの手で取り戻したい。</span>
+    </p>
+    <p class="exp_02">そんな思いから、チーズ職人養成学校「チーズアカデミーＴＯＫＹＯ」は歩みを始めています。</p>
+    <p class="exp_02">卒業後、チーズ自給自足のバックアップはもちろんのこと、
+      <br><span>チーズ職人への就職・転職もサポートします。</span>
+    </p>
+
+  </div>
+
+<!-- 221016 2102 スライドショーに切替のため削除 -->
+  <!-- <div class="below-about">
+    <ul>
+      <li>
+        <img class="below-01" src="./img/about_01.jpg" alt="#"/>
+      </li>
+      <li>
+        <img class="below-02" src="./img/about_02.jpg" alt="#"/>
+      </li>
+      <li>
+        <img class="below-03" src="./img/about_03.jpg" alt="#"/>
+      </li>
+      <li>
+        <img class="below-04" src="./img/about_04.jpg" alt="#"/>
+      </li>
+    </ul>
+  </div> -->
+
+   <!-- /*221016 2053 slideshowトライ２-２（6枚⇒4枚に変更にトライ） */ -->
+    <!-- https://yumegori.com/infinity-scroll-making-method -->
+
+  <div class="d-demo">
+    <div class="d-demo__wrap">
+        <ul class="d-demo__list d-demo__list--left">
+            <li class="d-demo__item"><img src="./img/about_01.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_02.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_03.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_04.jpg" alt></li>
+            <!-- <li class="d-demo__item"><img src="./img/about_05.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_06.jpg" alt></li> -->
+         </ul>
+         <ul class="d-demo__list d-demo__list--left">
+            <li class="d-demo__item"><img src="./img/about_01.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_02.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_03.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_04.jpg" alt></li>
+            <!-- <li class="d-demo__item"><img src="./img/about_05.jpg" alt></li>
+            <li class="d-demo__item"><img src="./img/about_06.jpg" alt></li> -->
+         </ul>
+    </div>
+  </div>
+
+  <div class="courseArea">
+      <h3 id="course">COURSE</h3>
+      <p>未経験からでもスタートができるよう、カリキュラムは多くの専門家や<br>現役チーズ職人のアドバイスのもと、作られました。</p>
+  </div>
+
+  <!-- 221015 1508 flex-wrap:wrapをやってみる -->
+  <div class="inner_course">
+
+    <div class="courseArea_img01">
+      <ul>
+        <li class="course_img01_left"><img  class="course_img" src="./img/course_01.jpg"></li>
+        <li class="course_img01_right">
+          <div class="course-img01_right_contents">
+            <h3>本格的な農園を使った実地研修</h3>
+            <p>チーズアカデミーでは、本格的な農園を使った実地研修を<br>
+                行うことができます。プロとして活躍するチーズ職人も<br>
+                使用するような、広大で環境も整った農園を余すところ<br>
+                なく使い、卒業時には本格的なチーズを自分の力で作れる<br>
+                実践力の養成を目指します。</p>
+          </div>
+        </li>
+      </ul>
+    <!-- </div> -->
+
+    <div class="courseArea_img02">
+      <ul>
+        <li class="course_img02_left">
+          <div class="course-img02_left_contents">
+            <h3>必要な知識もしっかりと取得</h3>
+            <p>チーズ作りには、しっかりとした食に関する知識が<br>
+                欠かせません。チーズアカデミーでは、一流講師陣による、<br>
+                チーズ作りに必要ないろはを余すところなく学べます。<br>
+                チーズそのものでなく、栄養学全般を学ぶことも<br>
+                可能ですので、チーズ以外への展開も夢ではないでしょう。</p>
+          </div>
+        </li>
+        <li class="course_img02_right"><img  class="course_img"  src="./img/course_02.jpg"></li>
+      </ul>
+    <!-- </div> -->
+
+    <div class="courseArea_img03">
+      <ul>
+        <li class="course_img03_left"><img  class="course_img"  src="./img/course_03.jpg"></li>
+        <li class="course_img03_right">
+          <div class="course-img03_right_contents">
+            <h3>卒業制作はティスティング審査あり</h3>
+            <p>チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。<br>
+                卒業制作として、チーズ作りを実際に行います。卒業後、<br>
+                一般参加によるティスティング審査があるため、作り手の<br>
+                目線だけでなく、消費者の目線から、卒業制作作品としての<br>
+                チーズを、しっかりと評価いただくことができます。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  <!-- </div> -->
+
+  <div class="newsArea" id="news">
+    <h3>NEWS</h3>
+    <p>ニュース</p>
+  </div>
+
+  <div class="newsContents">
+    <!-- <div class="newsContents_center_yose"> -->
+      <ul>
+        <li>
+          <div class="news_label_01">
+            <img src="./img/news_img.jpg">
+            <p class="hiduke">2016/11/18<p>
+            <p class="exp_03">チーズアカデミーの卒業生のコスゲさんによる<br>
+                チーズだけをふんだんに使用した話題のピザ屋<br>
+              「Kosuge Pizza」が渋谷でオープンしました !</p> 
+          </div>
+        </li>
+        <li>
+          <div class="news_label_02">
+            <img src="./img/news_img.jpg">
+            <p class="hiduke">2016/11/18<p>
+            <p class="exp_03">チーズアカデミーの卒業生のコスゲさんによる<br>
+                チーズだけをふんだんに使用した話題のピザ屋<br>
+              「Kosuge Pizza」が渋谷でオープンしました !</p> 
+          </div>
+        </li>
+        <li>
+          <div class="news_label_03">
+            <img src="./img/news_img.jpg">
+            <p class="hiduke">2016/11/18<p>
+            <p class="exp_03">チーズアカデミーの卒業生のコスゲさんによる<br>
+                チーズだけをふんだんに使用した話題のピザ屋<br>
+              「Kosuge Pizza」が渋谷でオープンしました !</p> 
+          </div>
+        </li>
+      </ul>
+    <!-- </div> -->
+  </div>
+
+  <div class="btn_more">
+    <button class="More">More</button>
+  </div>
+
+
+
+  <div class="access_Upper"  id="access">
+    <h3>Access</h3>
+    <p>会社情報</p>
+       <!-- <img src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.394765558122!2d139.71156151492468!3d35.66728053834505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9fa9e2e881%3A0x35396adb5ba7ce03!2sG&#39;s+ACADEMY+TOKYO!5e0!3m2!1sja!2sjp!4v1519143967597" witdh="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+  </div>
+
+<!-- アクセス MAP -->
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.392522579178!2d139.7116627153776!3d35.66733578019753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9faa249f2b%3A0xc415d41a1217b607!2z44CSMTA3LTAwNjEg5p2x5Lqs6YO95riv5Yy65YyX6Z2S5bGx77yT5LiB55uu77yV4oiS77yWIDJm!5e0!3m2!1sja!2sjp!4v1665898354722!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+  </div>
+
+  <!-- <div class="accessContents">
+    <ul>
+      <li>学校名<br>事務所所在地<br>TEL<br>FAX<br>MAIL</li>
+      <li>チーズアカデミー<br>〒107-0061東京都港区北青山3-5-6 青朋ビル2F
+        <br>03-5413-5045<br>03-5413-5046<br>dummy@cheeseacademy.tokyo</li>
+    </ul>
+  </div> -->
+
+  <div class="accessContents">
+    <table class="example" border="1">
+      <tr>
+        <td width="30%">学校名</td><td width="70%">チーズアカデミー</td>
+      </tr>
+      <tr>
+        <td>事務所所在地</td><td>〒107-0061東京都港区北青山3-5-6 青朋ビル2F</td>
+      </tr>
+      <tr>
+        <td>TEL</td><td>03-5413-5045</td>
+      </tr>
+      <tr>
+        <td>FAX</td><td>03-5413-5046</td>
+      </tr>
+      <tr>
+        <td>MAIL</td><td>dummy@cheeseacademy.tokyo</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="contactArea"  id="contact">
+    <h3>CONTACT</h3>
+    <title>説明会お申し込み・お問い合わせ</title>
+    <p class="contact_p1">ぜひ１度、足を運んでみませんか。説明会は随時開催中。<br>
+       その他、お問い合わせもお気軽にどうぞ。お待ちしております。</p>
+    <p class="contact_p2">※チーズアカデミーは実際には存在しません。<br>
+        間違っても問い合わせしないようお願いいたします。</p>
+  </div>
+
+
+
+  <!-- /* コンタクトエリア*/ -->
+<!-- 221010 2047：フォームエリアにtalbeを入れてみたい！ -->
+  <div class="formArea">
+    <!-- <p>talbeを使ったトライアル</p> -->
+    <table class="table_rule">
+      <tr class="table_01">
+        <td class="td01" >名前</td>
+        <td class="td02">
+          <input type="text" class="ichigyo" placeholder="例：山田太郎">
+        </td>
+      </tr>
+      <tr class="table_02">
+        <td class="td01">カナ</td>
+        <td  class="td02">
+          <input type="text" class="ichigyo" placeholder="例：ヤマダタロウ">
+        </td>
+      </tr>
+      <tr class="table_03">
+        <td class="td01">メールアドレス</td>
+        <td  class="td02">
+          <input type="text" class="ichigyo"placeholder="例:sample@sample.com">
+        </td>
+      </tr>
+      <tr class="table_04">
+        <td class="td01">チーズアカデミーを<br>知ったきっかけ</td>
+        <td  class="td02">
+          <div>
+            <select  class="ichigyo">
+              <option class="sentaku" value="">選択してください</option>
+              <option class="sentaku"  value="google検索">google検索</option>
+              <option class="sentaku"  value="SNS">SNS</option>
+              <option class="sentaku"  value="紹介">紹介</option>
+              <option class="sentaku"  value="たまたま通りかかった">たまたま通りかかった</option>
+              <option class="sentaku"  value="その他">その他</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr class="table_05">
+        <td class="td01">志望動機</td>
+        <td  class="td02">
+          <div class="yobi">
+            <!-- <li> -->
+              <label class="choices" for="#">
+                <input class="each_choice" type="checkbox"><span>起業をしたい</span>
+              </label>
+            <!-- </li> -->
+            <!-- <li> -->
+              <label class="choices"  for="#"></label>
+                <input class="each_choice"  type="checkbox"><span>チーズ系企業に就職･転職したい</span>
+              <!-- </li> -->
+            <!-- <li> -->
+              <label class="choices"  for="#">
+                <input class="each_choice"  type="checkbox"><span>チーズと関わる仕事をしており、仕事に生かしたい</span>
+              </label>
+            <!-- </li> -->
+            <!-- <li> -->
+              <label class="choices"  for="#">
+                <input class="each_choice"  type="checkbox"><span>チーズの教養を身につけたい</span>
+              </label>
+            <!-- </li> -->
+          </div>
+        </td>
+      </tr>
+      <tr class="table_06">
+        <td class="td01">詳細</td>
+        <td class="td02"><textarea></textarea></td>
+      </tr>
+ 
+
+    </table>
+      </div>
+    <div class="btn_submit">
+      <input class="submit" type="button" value="送信" class="button">
+    </div>
+
+
+  <footer>
+    <p>copyrights.2016 Cheese Academy Tokyo All Rights Reserved.</p>
+  </footer>
+
+  <!-- /*221016 1726　 Youtube埋め込み */ -->
+  <!-- 221020 2034 youtube box化 -->
+  <div class="youtube_box">
+    <div class="youtube_small_box_01">
+      <div class="setsumei_01">
+        <h3 >参考動画１ : チーズのある生活</h3>
+      </div>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tBghtXzY0Uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  <!-- /*221016 2012 Youtube埋め込み2 */ -->
+  
+  <!-- <div class="setsumei_01_2">
+      <h3 >トライアル1-2 : YouTube埋め込み</h3>
+    </div>
+    <div class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VeOiTX_zXrk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> -->
+
+  <!-- /*221016 2012 Youtube埋め込み3 */ -->
+    <div class="youtube_small_box_02">
+      <div class="setsumei_01_3">
+        <h3 >参考動画2 : チーズの製造工程</h3>
+      </div>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VeOiTX_zXrk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+    <!-- /*221016 1742 slideshowトライ */ -->
+
+  <div class="setsumei_02">
+    <h3 >トライアル2 : スライドショー（1）（HTMLとCSSだけ）</h3>
+  </div>
+  <div class="slider">
+    <div class="slider-inner">
+        <div class="slider-item"><img src="./img/about_01.jpg"></div>
+        <div class="slider-item"><img src="./img/about_02.jpg"></div>
+        <div class="slider-item"><img src="./img/about_03.jpg"></div>
+    </div>
+</div>
+
+
+
+    <!-- /*221016 2000 slideshowトライ２ */ -->
+    <!-- https://yumegori.com/infinity-scroll-making-method -->
+
+<div class="d-demo">
+  <div class="d-demo__wrap">
+      <ul class="d-demo__list d-demo__list--left">
+          <li class="d-demo__item"><img src="./img/about_01.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_02.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_03.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_04.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_05.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_06.jpg" alt></li>
+       </ul>
+       <ul class="d-demo__list d-demo__list--left">
+          <li class="d-demo__item"><img src="./img/about_01.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_02.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_03.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_04.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_05.jpg" alt></li>
+          <li class="d-demo__item"><img src="./img/about_06.jpg" alt></li>
+       </ul>
+  </div>
+</div>
+
+    <!-- /*221016 2053 slideshowトライ２-２（6枚⇒4枚に変更にトライ） */ -->
+    <!-- https://yumegori.com/infinity-scroll-making-method -->
+
+    <div class="d-demo">
+      <div class="d-demo__wrap">
+          <ul class="d-demo__list d-demo__list--left">
+              <li class="d-demo__item"><img src="./img/about_01.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_02.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_03.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_04.jpg" alt></li>
+              <!-- <li class="d-demo__item"><img src="./img/about_05.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_06.jpg" alt></li> -->
+           </ul>
+           <ul class="d-demo__list d-demo__list--left">
+              <li class="d-demo__item"><img src="./img/about_01.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_02.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_03.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_04.jpg" alt></li>
+              <!-- <li class="d-demo__item"><img src="./img/about_05.jpg" alt></li>
+              <li class="d-demo__item"><img src="./img/about_06.jpg" alt></li> -->
+           </ul>
+      </div>
+    </div>
+
+<!-- 221022 0933 トライアル（フワッと）
+https://coco-factory.jp/ugokuweb/move02/4-1/ -->
+
+    <div class="fadeUp">ふわっ（その場で）</div>
+
+<!-- 221022 0950 トライアル（フワッと）
+<!-https://pengi-n.co.jp/blog/scroll-animation/ -->
+
+<div class="top">
+  <p class="title">チーズのセカイ　デモページ</p>
+</div>
+<div class="scroll_block_bg">
+  <div class="scroll-block fade-block1"><img src="./img/about_01.jpg" alt></div>
+</div>
+
+<div class="scroll-block fade-block2"><img src="./img/about_02.jpg" alt></div>
+<div class="scroll_block_bg">
+  <div class="scroll-block fade-block3"><img src="./img/about_03.jpg" alt></div>
+</div>
+<div class="scroll_block_bg">
+<div class="scroll-block fade-block4"><img src="./img/about_04.jpg" alt></div>
+</div>
+<div class="scroll-block fade-block5"><img src="./img/about_05.jpg" alt></div>
+<div class="scroll_block_bg">
+  <div class="scroll-block fade-block6"><img src="./img/about_06.jpg" alt></div>
+</div>
+<!-- <script src="script.js"></script> -->
+
+<!-- <script>
+$(function() {
+  $(window).scroll(function() {
+    $(".scroll-block").each(function() {
+      var scroll = $(window).scrollTop();
+      var blockPosition = $(this).offset().top;
+      var windowHeihgt = $(window).height();
+      if (scroll > blockPosition - windowHeihgt + 300) {
+        $(this).addClass("blockIn");
+      }
+    });
+  });
+});
+</script> -->
+
+  <!-- ここから上にコードを書く -->
+  <!-- この中に記述していく -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
